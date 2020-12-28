@@ -1,0 +1,275 @@
+/* General */
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header */
+
+header {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6rem;
+    border-bottom: 2px solid black;
+    background-color: white;
+}
+
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    width: 70%;
+    height: auto;
+}
+
+
+nav ul {
+    display: none;
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    background-color: transparent;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    padding-top: 0.5rem;
+    width: 24%;
+    height: 100%;
+    background-color: lightgray;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 12%;
+}
+
+nav a.icon {
+    display: block;
+    position: absolute;
+    right: 0.5rem;
+    top: 2.5rem;
+  }
+
+/* main */
+
+main {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+}
+
+main p {
+    width: 80%;
+    margin: 1rem auto;
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+
+/* about me */
+
+#about img,
+#projects img {
+    display: block;
+    width: 80%;
+    margin: 1rem auto;
+    border-radius: 10%;
+    border: 1px solid gray;
+}
+
+/* projects */
+
+
+
+/* skills */
+
+#skillimgs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#skillimgs figure {
+    width: 26%;
+    margin: 0.2rem;
+    height: auto;
+    vertical-align: middle;
+}
+
+#skillimgs figcaption {
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+    text-align: center;
+}
+
+#skillimgs img {
+    border: 0;
+    margin: 0.2 auto;
+}
+
+/* contact */
+
+#contact {
+    text-align: center;
+}
+
+#contact img {
+    width: 15%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    height: 3.5rem;
+    text-align: right;
+    border-top: 1px solid black;
+}
+
+footer img {
+    position: absolute;
+    left: 0;
+    width: 45%;
+}
+
+footer p {
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+/* Media queries */
+
+@media only screen and (min-width: 500px){
+    header img {
+        width: 40%;
+        margin-left: 1rem;
+    }
+
+    nav ul {
+        width: 100%;
+        position: absolute;
+        top: 2rem;
+        display: inline-block;
+        text-align: right;
+    }
+    
+    nav li {
+        width: auto;
+        margin-right: 0.6rem;
+        padding: 0.4rem;
+    }
+
+    #button {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 1000px){
+    header img {
+        height: 5rem;
+        width: auto;
+    }
+
+    nav li {
+        margin-right: 1rem;
+        padding: 0.6rem;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 5% repeat(4, 1fr) 5%;
+        grid-template-rows: repeat(10, 10rem);
+    }
+
+    h1 {
+        grid-area: 1 / 2 / span 1 / span 4;
+    }
+
+    /* About */
+
+    #about {
+        grid-area: 2 / 2 / 6 / 6;
+        display: grid;
+        grid-template-rows: 10% 90%;
+        grid-template-columns: 40% 60%;
+    }
+
+    #about h2 {
+        grid-area: 1 / 1 / span 1 / span 3;
+    }
+
+    #about img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Projects */
+    
+    #projects {
+        grid-area: 6 / 2 / 17 / 6;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 10% 45% 45%;
+    }
+
+    #projects h2 {
+        grid-area: 1 / 1 / span 1 / span 2;
+    }
+
+    #finnishschool {
+        grid-column-start: 1;
+    }
+
+    #livingharmony {
+        grid-column-start: 2;
+    }
+
+    /* skills */
+
+    #skills {
+        grid-area: 17 / 2 / 23 / 6;
+    }
+
+    /* contact */
+
+    #contact {
+        grid-area: 23 / 2 / 26 / 6;
+    }
+
+    footer img {
+        height: 3rem;
+        width: auto;
+    }
+
+}
+

@@ -1,0 +1,45 @@
+/* General */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6rem;
+    border-bottom: 2px solid black;
+    background-color: white;
+}
+
+header img {
+    position: absolute;
+    height: 5rem;
+    top: 0.5rem;
+    left: 5%;
+}
+
+nav ul {
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 3rem;
+    width: 6rem;
+    padding: 1rem 0;
+    background-color: lightgray;
+    text-align: center;
+    border: 1px solid black;
+}
+
+/* main */
+
+main {
+    margin-top: 12rem;
+}

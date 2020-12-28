@@ -1,0 +1,17 @@
+Plan for portfolio website
+
+- Long scroller with links to projects and links to sections on the page
+- exciting color scheme - yellow, pink, maybe blue
+- Sections:
+	- About Me
+	- Projects
+	- Skills
+	- Contact (LinkedIn, GitHub, email)
+- use CSS grid for layout (slightly overlapping elements?
+- MOBILE FIRST css
+
+Possible colors:
+
+"Yellow" (#ffff00)
+#E500FA (hot pink)
+#0033cc (deep-blue)
