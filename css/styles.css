@@ -22,7 +22,8 @@ h2 {
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
-    background-color: #E500FA;
+    background-color: darkblue;
+    color: white;
 }
 
 h3 {
