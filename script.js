@@ -6,4 +6,18 @@ function myFunction() {
     } else {
       x.style.display = "block";
     }
-  } 
+  };
+
+  let one = document.getElementById('html');
+  let two = document.getElementById('test');
+
+  function showTag(){
+    two.style.visibility = 'visible';
+  };
+  
+  function hideTag(){
+    two.style.visibility = 'hidden';
+  }
+
+  one.addEventListener('mouseover', showTag);
+  one.addEventListener('mouseout', hideTag);
