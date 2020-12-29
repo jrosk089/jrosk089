@@ -1,3 +1,13 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url("../fonts/Bebas_Neue/BebasNeue-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 /* General */
 
 * {
@@ -6,20 +16,23 @@
 
 body {
     background-color: black;
+    font-family: Courier, 'Courier New', monospace;
 }
 
 h1 {
+    font-family: 'Bebas Neue', Helvetica, sans-serif;
     padding-top: 1rem;
     margin-bottom: 1rem;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
     text-align: center;
 }
 
 h2 {
+    font-family: 'Bebas Neue', Helvetica, sans-serif;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     text-align: center;
     background-color: blue;
@@ -55,7 +68,7 @@ header img {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0.5rem;
-    width: 70%;
+    width: 60%;
     height: auto;
 }
 
@@ -67,19 +80,23 @@ nav ul {
     left: 0;
     width: 100%;
     height: 2rem;
-    background-color: transparent;
+    background-color: #E500FA;
     text-align: center;
+    border-bottom: 2px solid black;
 }
 
 nav li {
     display: inline-block;
     padding-top: 0.5rem;
-    width: 24%;
+    width: 22%;
     height: 100%;
-    background-color: lightgray;
+    background-color: yellow;
     text-align: center;
     border: 1px solid black;
-    border-radius: 12%;
+}
+
+nav li a {
+    color: black;
 }
 
 nav a.icon {
@@ -108,9 +125,15 @@ main p {
 
 /* about me */
 
+#aboutsec {
+    position: absolute;
+    top: 6rem;
+}
+
 #about {
     background-color: white;
     color: black;
+    padding-bottom: 1rem;
 }
 
 #about img,
@@ -124,9 +147,22 @@ main p {
 
 /* projects */
 
+#projectssec {
+    position: absolute;
+    margin-top: -6rem;
+}
 
 
 /* skills */
+
+#skills {
+    background-color: #E500FA;
+}
+
+#skillssec {
+    position: absolute;
+    margin-top: -6rem;
+}
 
 #skillimgs {
     display: flex;
@@ -157,25 +193,29 @@ main p {
 /* contact */
 
 #contact {
+    background-color: white;
     text-align: center;
+}
+
+#contactsec {
+    position: absolute;
+    margin-top: -6rem;
 }
 
 #contact img {
     width: 15%;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    opacity: 0.6;
-    transition: opacity 0.6s;
+    margin: 1rem;
 }
 
-#contact img:hover {
-    opacity: 1;
+#contact address {
+    padding: 1rem;
 }
 
 
 /* footer */
 
 footer {
+    margin-top: -4rem;
     width: 100%;
     height: 3.5rem;
     text-align: right;
@@ -198,12 +238,14 @@ footer p {
 
 @media only screen and (min-width: 500px){
     header img {
-        width: 40%;
+        width: 33%;
         margin-left: 1rem;
     }
 
     nav ul {
         width: 100%;
+        background-color: transparent;
+        border-bottom: 0;
         position: absolute;
         top: 2rem;
         display: inline-block;
@@ -214,6 +256,7 @@ footer p {
         width: auto;
         margin-right: 0.6rem;
         padding: 0.4rem;
+        box-shadow: 2px 3px 2px black;
     }
 
     #button {
@@ -231,6 +274,14 @@ footer p {
     nav li {
         margin-right: 1rem;
         padding: 0.6rem;
+        box-shadow: 3px 4px 3px black;
+        font-size: 1.3rem;
+        transition: all 0.4s ease-in;
+    }
+
+    nav li:hover {
+        background-color: white;
+        box-shadow: 6px 6px 5px black;
     }
 
     main {
@@ -251,6 +302,7 @@ footer p {
     #about {
         grid-area: 2 / 1 / 5 / 5;
         display: grid;
+        align-items: center;
         grid-template-rows: 4rem 1fr;
         grid-template-columns: 40% 60%;
     }
@@ -278,6 +330,8 @@ footer p {
     }
 
     #projectbox {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(14, 4.5rem);
@@ -286,9 +340,10 @@ footer p {
 
     #finnishhead {
         z-index: 3;
-        grid-area: 2 / 2 / span 1 / span 2;
+        grid-area: 2 / 2 / span 1 / span 3;
         background-color: yellow;
         color: black;
+        border: 1px solid black;
         align-self: start;
     }
 
@@ -298,20 +353,22 @@ footer p {
     }
 
     #finnishtext {
-        grid-area: 2 / 1 / 7 / 4;
+        grid-area: 2 / 1 / 8 / 4;
         padding-top: 3rem;
         padding-right: 5rem;
         padding-left: 1rem;
         background-color: #E500FA;
         color: white;
+        border: 1px solid black;
     }
 
     #harmonyhead {
         z-index: 3;
-        grid-area: 9 / 2 / span 1 / span 2;
+        grid-area: 9 / 2 / span 1 / span 3;
         background-color: #E500FA;
         color: white;
         align-self: start;
+        border: 1px solid black;
     }
 
     #harmonyimg {
@@ -320,12 +377,13 @@ footer p {
     }
 
     #harmonytext {
-        grid-area: 9 / 1 / 14 / 4;
+        grid-area: 9 / 1 / 15 / 4;
         padding-top: 3rem;
         padding-right: 5rem;
         padding-left: 1rem;
         background-color: yellow;
         color: black;
+        border: 1px solid black;
     }
 
     /* skills */
@@ -335,7 +393,6 @@ footer p {
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 4rem 1fr;
-        background-color: #E500FA;
     }
 
     #skills h2 {
@@ -343,6 +400,7 @@ footer p {
     }
 
     #skillimgs {
+        margin-top: 1rem;
         display: grid;
         width: 90%;
         justify-items: center;
@@ -365,23 +423,39 @@ footer p {
     figcaption {
         visibility: hidden;
         position: relative;
-        bottom: 100px;
+        bottom: 120px;
         left: 30px;
         width: 100px;
+        height: 50px;
+        padding-top: 1rem;
+        font-weight: bold;
     }
 
 
     /* contact */
 
     #contact {
-        background-color: white;
         grid-area: 20 / 1 / 24 / 5;
         grid-template-rows: 4rem 1fr;
     }
 
     #contact img {
-        width: 8%;
+        width: 8%; 
     }
+
+    #contact img,
+    address {
+        opacity: 0.6;
+        transition: opacity 0.6s;
+    }
+
+
+    #contact img:hover,
+    address:hover {
+        opacity: 1;
+    }
+
+    /* footer */
 
     footer img {
         height: 3rem;
