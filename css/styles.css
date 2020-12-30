@@ -272,7 +272,7 @@ footer p {
 }
 
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 1030px){
     header img {
         height: 5rem;
         width: auto;
@@ -316,10 +316,11 @@ footer p {
 
     #about h2 {
         grid-area: 1 / 1 / span 1 / span 3;
+        margin-bottom: 1rem;
     }
 
     #about img {
-        max-width: 60%;
+        max-width: 55%;
         height: auto;
         overflow: hidden;
     }
@@ -367,11 +368,12 @@ footer p {
     #finnishtext {
         grid-area: 2 / 1 / 8 / 4;
         padding-top: 3rem;
-        padding-right: 5rem;
+        padding-right: 5.5rem;
         padding-left: 1rem;
         background-color: #E500FA;
         color: white;
         border: 1px solid black;
+        text-align: left;
     }
 
     #harmonyhead {
@@ -395,11 +397,12 @@ footer p {
     #harmonytext {
         grid-area: 9 / 1 / 15 / 4;
         padding-top: 3rem;
-        padding-right: 5rem;
+        padding-right: 5.5rem;
         padding-left: 1rem;
         background-color: yellow;
         color: black;
         border: 1px solid black;
+        text-align: left;
     }
 
     /* skills */
