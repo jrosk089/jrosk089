@@ -8,13 +8,16 @@ function myFunction() {
     }
   };
 
+  /* Hiding and showing the tags for the "skills" when viewed on a computer (rather than a handheld device) */
+
+  //Setting shortcuts for the skill pictures
   let one = document.getElementById('html');
   let two = document.getElementById('css');
   let three = document.getElementById('js');
   let four = document.getElementById('git');
   let five = document.getElementById('trombone');
 
-
+  //showing and hiding the tags
   function showTag(){
     let tag = this.lastElementChild;
     tag.style.visibility = 'visible';
@@ -25,6 +28,7 @@ function myFunction() {
     tag.style.visibility = 'hidden';
   }
 
+  //Adding event handlers for the mouse hovering over and leaving the image
   one.addEventListener('mouseover', showTag);
   one.addEventListener('mouseout', hideTag);
 
